@@ -2,29 +2,30 @@ import { createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import Logo from "../assets/logo.png";
 import LeadsBg from "../assets/leadsBg.png";
-import kag1 from "../assets/kitchensAndGrills/img1.JPG";
-import kag2 from "../assets/kitchensAndGrills/img2.JPG";
-import kag3 from "../assets/kitchensAndGrills/img3.JPG";
-import kag4 from "../assets/kitchensAndGrills/img4.JPG";
-import kag5 from "../assets/kitchensAndGrills/img5.JPG";
-import kag6 from "../assets/kitchensAndGrills/img6.JPG";
-import kag9 from "../assets/kitchensAndGrills/img9.JPG";
-import bath1 from "../assets/bathrooms/img1.JPG";
-import bath2 from "../assets/bathrooms/img2.JPG";
-import bath3 from "../assets/bathrooms/img3.JPG";
-import bath4 from "../assets/bathrooms/img4.JPG";
-import bath5 from "../assets/bathrooms/img5.JPG";
-import bath6 from "../assets/bathrooms/img6.JPG";
-import room1 from "../assets/rooms/img1.JPG";
-import room2 from "../assets/rooms/img2.JPG";
-import room3 from "../assets/rooms/img3.JPG";
-import room4 from "../assets/rooms/img4.JPG";
+import kag1 from "../assets/kitchensAndGrills/img1.webp";
+import kag2 from "../assets/kitchensAndGrills/img2.webp";
+import kag3 from "../assets/kitchensAndGrills/img3.webp";
+import kag4 from "../assets/kitchensAndGrills/img4.webp";
+import kag5 from "../assets/kitchensAndGrills/img5.webp";
+import kag6 from "../assets/kitchensAndGrills/img6.webp";
+import kag9 from "../assets/kitchensAndGrills/img9.webp";
+import bath1 from "../assets/bathrooms/img1.webp";
+import bath2 from "../assets/bathrooms/img2.webp";
+import bath3 from "../assets/bathrooms/img3.webp";
+import bath4 from "../assets/bathrooms/img4.webp";
+import bath5 from "../assets/bathrooms/img5.webp";
+import bath6 from "../assets/bathrooms/img6.webp";
+import room1 from "../assets/rooms/img1.webp";
+import room2 from "../assets/rooms/img2.webp";
+import room3 from "../assets/rooms/img3.webp";
+import room4 from "../assets/rooms/img4.webp";
 
 export const Route = createRootRoute({
   component: () => (
     <>
       <div className="bg-blue p-1">
         <img
+          alt=""
           src={Logo}
           style={{
             height: "4.8rem",
@@ -141,41 +142,17 @@ export const Route = createRootRoute({
         <div className="p-4">
           <span className="text-md">Cozinhas e Churrasqueiras</span>
           <div className="grid grid-cols-3">
-            <img src={kag9} />
-            <img src={kag1} />
-            <img src={kag2} />
+            <img alt="" src={kag9} />
+            <img alt="" src={kag1} />
+            <img alt="" src={kag2} />
           </div>
           <div className="grid grid-cols-2">
-            <img src={kag3} />
-            <img src={kag4} />
+            <img alt="" src={kag3} />
+            <img alt="" src={kag4} />
           </div>
           <div className="grid grid-cols-2">
-            <img src={kag5} />
-            <img src={kag6} />
-          </div>
-        </div>
-        <div className="p-4">
-          <span className="text-md">Banheiros</span>
-          <div className="grid grid-cols-3">
-            <img src={bath1} />
-            <img src={bath2} />
-            <img src={bath3} />
-          </div>
-          <div className="grid grid-cols-3">
-            <img src={bath4} />
-            <img src={bath5} />
-            <img src={bath6} />
-          </div>
-        </div>
-        <div className="p-4">
-          <span className="text-md">Salas de estar e jantar</span>
-          <div className="grid grid-cols-2">
-            <img src={room1} />
-            <img src={room4} />
-          </div>
-          <div className="grid grid-cols-2">
-            <img src={room3} />
-            <img src={room2} />
+            <img alt="" src={kag5} />
+            <img alt="" src={kag6} />
           </div>
         </div>
         <div className="bg-green p-4 flex flex-col gap-2">
@@ -207,6 +184,30 @@ export const Route = createRootRoute({
                 </defs>
               </svg>
             </button>
+          </div>
+        </div>
+        <div className="p-4">
+          <span className="text-md">Banheiros</span>
+          <div className="grid grid-cols-3">
+            <img alt="" src={bath1} />
+            <img alt="" src={bath2} />
+            <img alt="" src={bath3} />
+          </div>
+          <div className="grid grid-cols-3">
+            <img alt="" src={bath4} />
+            <img alt="" src={bath5} />
+            <img alt="" src={bath6} />
+          </div>
+        </div>
+        <div className="p-4">
+          <span className="text-md">Salas de estar e jantar</span>
+          <div className="grid grid-cols-2">
+            <img alt="" src={room1} />
+            <img alt="" src={room4} />
+          </div>
+          <div className="grid grid-cols-2">
+            <img alt="" src={room3} />
+            <img alt="" src={room2} />
           </div>
         </div>
       </div>

@@ -32,7 +32,11 @@ export const Route = createRootRoute({
     const toggleDialogCatalog = () => catalogDialogElement.showModal();
 
     return (
-      <>
+      <div
+        style={{
+          maxWidth: "500px",
+        }}
+      >
         <LeadDialog
           id={DIALOG_CATALOG_ID}
           title="receba o catálogo"
@@ -56,7 +60,7 @@ export const Route = createRootRoute({
           </svg>
         </div>
         <div
-          className="flex flex-col justify-center text-center gap-4 bg-darkBase"
+          className="flex flex-col justify-center text-center gap-8 bg-darkBase"
           style={{
             height: "350px",
           }}
@@ -64,14 +68,21 @@ export const Route = createRootRoute({
           <img
             src={Hero}
             alt=""
-            className="absolute object-cover brightness-50 w-full rounded-b-3xl z-0"
+            className="absolute object-cover w-full rounded-b-3xl z-0"
             style={{
               height: "350px",
+              filter: "brightness(0.4)",
+              maxWidth: "500px",
             }}
           />
-          <span className="text-white font-medium text-2xl z-10">
-            16 anos cuidando do seu lar
-          </span>
+          <div className="flex flex-col">
+            <span className="text-white font-medium text-2xl z-10">
+              Arquitetura para Todos
+            </span>
+            <span className="text-white font-light text-lg z-10">
+              16 anos cuidando do seu lar
+            </span>
+          </div>
           <div className="z-10">
             <a
               href="https://wa.me/5512991820133"
@@ -406,7 +417,7 @@ export const Route = createRootRoute({
         </div>
         {(location.hostname === "localhost" ||
           location.hostname === "127.0.0.1") && <TanStackRouterDevtools />}
-      </>
+      </div>
     );
   },
 });

@@ -1,6 +1,5 @@
 import { createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import Logo from "../assets/logo.png";
 import LeadsBg from "../assets/leadsBg.png";
 import kag1 from "../assets/kitchensAndGrills/img1.webp";
 import kag2 from "../assets/kitchensAndGrills/img2.webp";

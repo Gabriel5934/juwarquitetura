@@ -1,25 +1,49 @@
 import { createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import LeadsBg from "../assets/leadsBg.png";
-import kag1 from "../assets/kitchensAndGrills/img1.webp";
-import kag2 from "../assets/kitchensAndGrills/img2.webp";
-import kag3 from "../assets/kitchensAndGrills/img3.webp";
-import kag4 from "../assets/kitchensAndGrills/img4.webp";
-import kag5 from "../assets/kitchensAndGrills/img5.webp";
-import kag6 from "../assets/kitchensAndGrills/img6.webp";
-import kag9 from "../assets/kitchensAndGrills/img9.webp";
-import bath1 from "../assets/bathrooms/img1.webp";
-import bath2 from "../assets/bathrooms/img2.webp";
-import bath3 from "../assets/bathrooms/img3.webp";
-import bath4 from "../assets/bathrooms/img4.webp";
-import bath5 from "../assets/bathrooms/img5.webp";
-import bath6 from "../assets/bathrooms/img6.webp";
-import room1 from "../assets/rooms/img1.webp";
-import room2 from "../assets/rooms/img2.webp";
-import room3 from "../assets/rooms/img3.webp";
-import room4 from "../assets/rooms/img4.webp";
+import bath1 from "../assets/bathroom/img1.webp";
+import bath2 from "../assets/bathroom/img2.webp";
+import bath3 from "../assets/bathroom/img3.webp";
+import bath4 from "../assets/bathroom/img4.webp";
+import bath5 from "../assets/bathroom/img5.webp";
+import bath6 from "../assets/bathroom/img6.webp";
+import bath7 from "../assets/bathroom/img7.webp";
+import bath8 from "../assets/bathroom/img8.webp";
+import bath9 from "../assets/bathroom/img9.webp";
+import bath10 from "../assets/bathroom/img10.webp";
+import ktch1 from "../assets/kitchen/img1.webp";
+import ktch2 from "../assets/kitchen/img2.webp";
+import ktch3 from "../assets/kitchen/img3.webp";
+import ktch4 from "../assets/kitchen/img4.webp";
+import ktch5 from "../assets/kitchen/img5.webp";
+import ktch6 from "../assets/kitchen/img6.webp";
+import ktch7 from "../assets/kitchen/img7.webp";
+import ktch8 from "../assets/kitchen/img8.webp";
+import ktch9 from "../assets/kitchen/img9.webp";
+import ktch10 from "../assets/kitchen/img10.webp";
+import ktch11 from "../assets/kitchen/img11.webp";
+import ktch12 from "../assets/kitchen/img12.webp";
+import ktch13 from "../assets/kitchen/img13.webp";
+import ktch14 from "../assets/kitchen/img14.webp";
+import ktch15 from "../assets/kitchen/img15.webp";
+import ktch16 from "../assets/kitchen/img16.webp";
+import bed1 from "../assets/bedroom/img1.webp";
+import bed2 from "../assets/bedroom/img2.webp";
+import bed3 from "../assets/bedroom/img3.webp";
+import bed4 from "../assets/bedroom/img4.webp";
+import bed5 from "../assets/bedroom/img5.webp";
+import lvn1 from "../assets/living/img1.webp";
+import lvn2 from "../assets/living/img2.webp";
+import lvn3 from "../assets/living/img3.webp";
+import lvn4 from "../assets/living/img4.webp";
+import lvn5 from "../assets/living/img5.webp";
+import lvn6 from "../assets/living/img6.webp";
 import Hero from "../assets/hero.webp";
+import MiniJu from "../assets/miniJu.png";
+import HappyCouple from "../assets/happyCouple.webp";
 import LeadDialog from "../components/lead-dialog";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const DIALOG_CATALOG_ID = "dialog-catalog";
 const GRADUATION_YEAR = 2007;
@@ -34,6 +58,33 @@ export const Route = createRootRoute({
 
     const years = new Date().getFullYear() - GRADUATION_YEAR;
 
+    const carouselResponsive = {
+      desktop: {
+        breakpoint: {
+          max: 3000,
+          min: 1024,
+        },
+        items: 3,
+        partialVisibilityGutter: 40,
+      },
+      mobile: {
+        breakpoint: {
+          max: 464,
+          min: 0,
+        },
+        items: 1,
+        partialVisibilityGutter: 30,
+      },
+      tablet: {
+        breakpoint: {
+          max: 1024,
+          min: 464,
+        },
+        items: 2,
+        partialVisibilityGutter: 30,
+      },
+    };
+
     return (
       <div
         style={{
@@ -45,7 +96,7 @@ export const Route = createRootRoute({
           title="receba o catálogo"
           subtitle="Juw Arquitetura"
         />
-        <div className="bg-green flex">
+        <div className="bg-green flex justify-between items-center">
           <svg
             width="70"
             height="70"
@@ -61,6 +112,33 @@ export const Route = createRootRoute({
               />
             </g>
           </svg>
+          <a
+            href="https://www.instagram.com/juw_arquitetura/"
+            target="_blank"
+            rel="noopener"
+            className="px-4"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="iconmonstr-instagram-11 1" clip-path="url(#clip0_185_74)">
+                <path
+                  id="Vector"
+                  d="M10 1.8025C12.67 1.8025 12.9867 1.8125 14.0417 1.86083C16.7517 1.98417 18.0175 3.27 18.1408 5.96C18.1892 7.01417 18.1983 7.33083 18.1983 10.0008C18.1983 12.6717 18.1883 12.9875 18.1408 14.0417C18.0167 16.7292 16.7542 18.0175 14.0417 18.1408C12.9867 18.1892 12.6717 18.1992 10 18.1992C7.33 18.1992 7.01333 18.1892 5.95917 18.1408C3.2425 18.0167 1.98333 16.725 1.86 14.0408C1.81167 12.9867 1.80167 12.6708 1.80167 10C1.80167 7.33 1.8125 7.01417 1.86 5.95917C1.98417 3.27 3.24667 1.98333 5.95917 1.86C7.01417 1.8125 7.33 1.8025 10 1.8025ZM10 0C7.28417 0 6.94417 0.0116667 5.8775 0.06C2.24583 0.226667 0.2275 2.24167 0.0608333 5.87667C0.0116667 6.94417 0 7.28417 0 10C0 12.7158 0.0116667 13.0567 0.06 14.1233C0.226667 17.755 2.24167 19.7733 5.87667 19.94C6.94417 19.9883 7.28417 20 10 20C12.7158 20 13.0567 19.9883 14.1233 19.94C17.7517 19.7733 19.775 17.7583 19.9392 14.1233C19.9883 13.0567 20 12.7158 20 10C20 7.28417 19.9883 6.94417 19.94 5.8775C19.7767 2.24917 17.7592 0.2275 14.1242 0.0608333C13.0567 0.0116667 12.7158 0 10 0ZM10 4.865C7.16417 4.865 4.865 7.16417 4.865 10C4.865 12.8358 7.16417 15.1358 10 15.1358C12.8358 15.1358 15.135 12.8367 15.135 10C15.135 7.16417 12.8358 4.865 10 4.865ZM10 13.3333C8.15917 13.3333 6.66667 11.8417 6.66667 10C6.66667 8.15917 8.15917 6.66667 10 6.66667C11.8408 6.66667 13.3333 8.15917 13.3333 10C13.3333 11.8417 11.8408 13.3333 10 13.3333ZM15.3383 3.4625C14.675 3.4625 14.1375 4 14.1375 4.6625C14.1375 5.325 14.675 5.8625 15.3383 5.8625C16.0008 5.8625 16.5375 5.325 16.5375 4.6625C16.5375 4 16.0008 3.4625 15.3383 3.4625Z"
+                  fill="#F4EFE1"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_185_74">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
         </div>
         <div
           className="flex flex-col justify-center text-center gap-8 bg-darkBase"
@@ -123,12 +201,7 @@ export const Route = createRootRoute({
             </a>
           </div>
         </div>
-        <div
-          className="bg-darkBase bg-no-repeat bg-cover flex flex-col p-4 gap-2"
-          style={{
-            backgroundImage: `url(${LeadsBg})`,
-          }}
-        >
+        <div className="bg-darkBase bg-no-repeat bg-cover flex flex-col p-4 gap-2 relative overflow-clip pb-16 pt-8">
           <div className="flex flex-col">
             <span className="text-xl font-medium">
               Catálogo Juw Arquitetura
@@ -145,28 +218,110 @@ export const Route = createRootRoute({
               eu quero!
             </button>
           </div>
+          <img
+            src={MiniJu}
+            alt=""
+            className="absolute"
+            style={{
+              right: "8px",
+              top: "32px",
+              width: "150px",
+            }}
+          />
         </div>
-        <div className="bg-darkBase">
-          <div className="flex flex-col gap-4 bg-lightBase rounded-t-3xl pt-4">
-            <span className="text-xl font-medium text-center">
-              Alguns dos meus projetos
+        <div
+          className="bg-darkBase"
+          style={{
+            maxWidth: "100vw",
+            overflowX: "hidden",
+          }}
+        >
+          <div className="text-primary px-8 bg-lightBase rounded-t-3xl flex flex-col pt-8">
+            <span className="font-medium text-lg">
+              Deixando cada cômodo e ambiente
             </span>
+            <span className="font-bold text-2xl underline">do seu jeito</span>
           </div>
-          <div className="p-4 bg-lightBase">
-            <span className="text-md">Cozinhas e Churrasqueiras</span>
-            <div className="grid grid-cols-3">
-              <img alt="" src={kag9} />
-              <img alt="" src={kag1} />
-              <img alt="" src={kag2} />
+          <div className="carouselContainer">
+            <span>Banheiros e Lavabos</span>
+            <Carousel
+              className="carousel w-screen"
+              centerMode={true}
+              infinite
+              responsive={carouselResponsive}
+              swipeable
+              minimumTouchDrag={0}
+            >
+              <img alt="" src={bath1} />
+              <img alt="" src={bath2} />
+              <img alt="" src={bath3} />
+              <img alt="" src={bath4} />
+              <img alt="" src={bath5} />
+              <img alt="" src={bath6} />
+              <img alt="" src={bath7} />
+              <img alt="" src={bath8} />
+              <img alt="" src={bath9} />
+              <img alt="" src={bath10} />
+            </Carousel>
+          </div>
+          <div
+            style={{
+              height: "200px",
+            }}
+            className="flex flex-col justify-center py-16 bg-cover bg-center gap-2"
+          >
+            <span className="text-center z-10 text-white font-medium text-lg">
+              Falta pouco para você realizar seu sonho
+            </span>
+            <div className="text-center z-10">
+              <a
+                href="https://wa.me/5512991820133"
+                target="_blank"
+                rel="noopener"
+              >
+                <button className="btn btn-primary uppercase">
+                  solicite um orçamento
+                </button>
+              </a>
             </div>
-            <div className="grid grid-cols-2">
-              <img alt="" src={kag3} />
-              <img alt="" src={kag4} />
-            </div>
-            <div className="grid grid-cols-2">
-              <img alt="" src={kag5} />
-              <img alt="" src={kag6} />
-            </div>
+            <img
+              src={HappyCouple}
+              alt=""
+              className="absolute object-cover w-full z-0"
+              style={{
+                height: "200px",
+                filter: "brightness(0.3)",
+                maxWidth: "500px",
+              }}
+            />
+          </div>
+          <div className="carouselContainer">
+            <span>Cozinhas e Áreas Gourmet</span>
+            <Carousel
+              className="carousel w-screen"
+              centerMode={true}
+              infinite
+              responsive={carouselResponsive}
+              swipeable
+              minimumTouchDrag={0}
+            >
+              <img alt="" src={ktch1} />
+              <img alt="" src={ktch2} />
+              <img alt="" src={ktch3} />
+              <img alt="" src={ktch4} />
+              <img alt="" src={ktch5} />
+              <img alt="" src={ktch6} />
+              <img alt="" src={ktch7} />
+              <img alt="" src={ktch8} />
+              <img alt="" src={ktch9} />
+              <img alt="" src={ktch10} />
+              <img alt="" src={ktch11} />
+              <img alt="" src={ktch12} />
+              <img alt="" src={ktch13} />
+              <img alt="" src={ktch14} />
+              <img alt="" src={ktch15} />
+              <img alt="" src={ktch16} />
+            </Carousel>
           </div>
           <div className="bg-blue p-4 flex flex-col gap-2">
             <span className="text-white">Mais inspirações e dicas</span>
@@ -205,29 +360,40 @@ export const Route = createRootRoute({
               </a>
             </div>
           </div>
-          <div className="p-4 bg-lightBase">
-            <span className="text-md">Banheiros</span>
-            <div className="grid grid-cols-3">
-              <img alt="" src={bath1} />
-              <img alt="" src={bath2} />
-              <img alt="" src={bath3} />
-            </div>
-            <div className="grid grid-cols-3">
-              <img alt="" src={bath4} />
-              <img alt="" src={bath5} />
-              <img alt="" src={bath6} />
-            </div>
+          <div className="carouselContainer">
+            <span>Quartos e Closets</span>
+            <Carousel
+              className="carousel w-screen"
+              centerMode={true}
+              infinite
+              responsive={carouselResponsive}
+              swipeable
+              minimumTouchDrag={0}
+            >
+              <img alt="" src={bed1} />
+              <img alt="" src={bed2} />
+              <img alt="" src={bed3} />
+              <img alt="" src={bed4} />
+              <img alt="" src={bed5} />
+            </Carousel>
           </div>
-          <div className="p-4 bg-lightBase">
-            <span className="text-md">Salas de estar e jantar</span>
-            <div className="grid grid-cols-2">
-              <img alt="" src={room1} />
-              <img alt="" src={room4} />
-            </div>
-            <div className="grid grid-cols-2">
-              <img alt="" src={room3} />
-              <img alt="" src={room2} />
-            </div>
+          <div className="carouselContainer">
+            <span>Áreas de Convivência</span>
+            <Carousel
+              className="carousel w-screen"
+              centerMode={true}
+              infinite
+              responsive={carouselResponsive}
+              swipeable
+              minimumTouchDrag={0}
+            >
+              <img alt="" src={lvn1} />
+              <img alt="" src={lvn2} />
+              <img alt="" src={lvn3} />
+              <img alt="" src={lvn4} />
+              <img alt="" src={lvn5} />
+              <img alt="" src={lvn6} />
+            </Carousel>
           </div>
         </div>
         <div className="bg-darkBase text-center flex flex-col p-4 gap-4">

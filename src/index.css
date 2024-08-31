@@ -11,3 +11,16 @@
 .horStack {
   @apply flex justify-center items-center;
 }
+
+.carousel img {
+  @apply object-cover h-full;
+  width: 215px;
+}
+
+.carouselContainer {
+  @apply px-4 py-8 flex flex-col items-center gap-2 bg-lightBase;
+}
+
+.carouselContainer > span {
+  @apply w-full text-left;
+}

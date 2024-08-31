@@ -1,6 +1,5 @@
 import { createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import LeadsBg from "../assets/leadsBg.png";
 import bath1 from "../assets/bathroom/img1.webp";
 import bath2 from "../assets/bathroom/img2.webp";
 import bath3 from "../assets/bathroom/img3.webp";

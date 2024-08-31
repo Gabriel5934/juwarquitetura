@@ -38,7 +38,7 @@ import lvn4 from "../assets/living/img4.webp";
 import lvn5 from "../assets/living/img5.webp";
 import lvn6 from "../assets/living/img6.webp";
 import Hero from "../assets/hero.webp";
-import MiniJu from "../assets/miniJu.png";
+import MiniJu from "../assets/miniJu.webp";
 import HappyCouple from "../assets/happyCouple.webp";
 import LeadDialog from "../components/lead-dialog";
 import Carousel from "react-multi-carousel";

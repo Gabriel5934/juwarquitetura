@@ -224,7 +224,7 @@ export const Route = createRootRoute({
             style={{
               right: "8px",
               top: "32px",
-              width: "150px",
+              width: "130px",
             }}
           />
         </div>

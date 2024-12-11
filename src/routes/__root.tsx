@@ -63,7 +63,7 @@ export const Route = createRootRoute({
           max: 3000,
           min: 1024,
         },
-        items: 3,
+        items: 5,
         partialVisibilityGutter: 40,
       },
       mobile: {
@@ -71,7 +71,7 @@ export const Route = createRootRoute({
           max: 464,
           min: 0,
         },
-        items: 1,
+        items: 2,
         partialVisibilityGutter: 30,
       },
       tablet: {
@@ -79,29 +79,28 @@ export const Route = createRootRoute({
           max: 1024,
           min: 464,
         },
-        items: 2,
+        items: 3,
         partialVisibilityGutter: 30,
       },
     };
 
     return (
       <div
-        style={{
-          maxWidth: "500px",
-        }}
+      // style={{
+      //   maxWidth: "500px",
+      // }}
       >
         <LeadDialog
           id={DIALOG_CATALOG_ID}
           title="receba o catálogo"
           subtitle="Juw Arquitetura"
         />
-        <div className="bg-green flex justify-between items-center">
+        <div className="bg-green flex justify-between items-center lg:px-8 lg:py-4">
           <svg
-            width="70"
-            height="70"
             viewBox="0 0 70 70"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className={`w-[70px] lg:w-[80px]`}
           >
             <g id="Logo_FundoTrnsBeje 1">
               <path
@@ -118,8 +117,7 @@ export const Route = createRootRoute({
             className="px-4"
           >
             <svg
-              width="20"
-              height="20"
+              className={`w-[20px] lg:w-[30px]`}
               viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -139,27 +137,20 @@ export const Route = createRootRoute({
             </svg>
           </a>
         </div>
-        <div
-          className="flex flex-col justify-center text-center gap-8 bg-darkBase"
-          style={{
-            height: "350px",
-          }}
-        >
+        <div className="flex flex-col justify-center text-center gap-8 bg-darkBase h-[350px] lg:h-[700px]">
           <img
             src={Hero}
             alt=""
-            className="absolute object-cover w-full rounded-b-3xl z-0"
+            className="absolute object-cover w-full rounded-b-3xl lg:rounded-none z-0 h-[350px] lg:h-[700px]"
             style={{
-              height: "350px",
               filter: "brightness(0.4)",
-              maxWidth: "500px",
             }}
           />
-          <div className="flex flex-col">
-            <span className="text-white font-medium text-2xl z-10">
+          <div className="flex flex-col lg:gap-4">
+            <span className="text-white font-medium text-2xl z-10 lg:text-5xl">
               Arquitetura para Todos
             </span>
-            <span className="text-white font-light text-lg z-10">
+            <span className="text-white font-light text-lg lg:text-2xl z-10">
               {years} anos transformando o seu lar
             </span>
           </div>
@@ -169,7 +160,7 @@ export const Route = createRootRoute({
               target="_blank"
               rel="noopener"
             >
-              <button className="btn btn-primary uppercase">
+              <button className="btn btn-primary uppercase lg:btn-lg">
                 fale comigo
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -200,33 +191,28 @@ export const Route = createRootRoute({
             </a>
           </div>
         </div>
-        <div className="bg-darkBase bg-no-repeat bg-cover flex flex-col p-4 gap-2 relative overflow-clip pb-16 pt-8">
-          <div className="flex flex-col">
-            <span className="text-xl font-medium">
-              Catálogo Juw Arquitetura
-            </span>
-            <span className="text-base">
-              meus projetos para você se inspirar
-            </span>
+        <div className="flex justify-center w-full pt-8 lg:pt-16 px-4">
+          <div className="flex items-end gap-4 lg:gap-8">
+            <div className="bg-darkBase bg-no-repeat bg-cover flex flex-col gap-2 relative overflow-clip mb-8 lg:mb-16">
+              <div className="flex flex-col">
+                <span className="text-xl font-medium lg:text-4xl">
+                  Catálogo Juw Arquitetura
+                </span>
+                <span className="text-base lg:text-2xl">
+                  meus projetos para você se inspirar
+                </span>
+              </div>
+              <div>
+                <button
+                  className="btn btn-primary uppercase lg:btn-lg"
+                  onClick={toggleDialogCatalog}
+                >
+                  eu quero!
+                </button>
+              </div>
+            </div>
+            <img src={MiniJu} alt="" className="h-[200px] lg:h-[300px]" />
           </div>
-          <div>
-            <button
-              className="btn btn-primary uppercase"
-              onClick={toggleDialogCatalog}
-            >
-              eu quero!
-            </button>
-          </div>
-          <img
-            src={MiniJu}
-            alt=""
-            className="absolute"
-            style={{
-              right: "8px",
-              top: "32px",
-              width: "130px",
-            }}
-          />
         </div>
         <div
           className="bg-darkBase"
@@ -235,41 +221,40 @@ export const Route = createRootRoute({
             overflowX: "hidden",
           }}
         >
-          <div className="text-primary px-8 bg-lightBase rounded-t-3xl flex flex-col pt-8">
-            <span className="font-medium text-lg">
-              Deixando cada cômodo e ambiente
-            </span>
-            <span className="font-bold text-2xl underline">do seu jeito</span>
+          <div className="flex flex-col lg:gap-16  bg-lightBase">
+            <div className="lg:hidden text-primary px-8 rounded-t-3xl lg:rounded-none flex flex-col pt-8 lg:px-32 lg:pt-16 lg:text-center">
+              <span className="font-medium text-lg lg:text-4xl">
+                Deixando cada cômodo e ambiente
+              </span>
+              <span className="font-bold text-2xl underline lg:text-4xl ">
+                do seu jeito
+              </span>
+            </div>
+            <div className="carouselContainer">
+              <span>Banheiros e Lavabos</span>
+              <Carousel
+                className="carousel w-screen"
+                centerMode={true}
+                infinite
+                responsive={carouselResponsive}
+                swipeable
+                minimumTouchDrag={0}
+              >
+                <img alt="" src={bath1} />
+                <img alt="" src={bath2} />
+                <img alt="" src={bath3} />
+                <img alt="" src={bath4} />
+                <img alt="" src={bath5} />
+                <img alt="" src={bath6} />
+                <img alt="" src={bath7} />
+                <img alt="" src={bath8} />
+                <img alt="" src={bath9} />
+                <img alt="" src={bath10} />
+              </Carousel>
+            </div>
           </div>
-          <div className="carouselContainer">
-            <span>Banheiros e Lavabos</span>
-            <Carousel
-              className="carousel w-screen"
-              centerMode={true}
-              infinite
-              responsive={carouselResponsive}
-              swipeable
-              minimumTouchDrag={0}
-            >
-              <img alt="" src={bath1} />
-              <img alt="" src={bath2} />
-              <img alt="" src={bath3} />
-              <img alt="" src={bath4} />
-              <img alt="" src={bath5} />
-              <img alt="" src={bath6} />
-              <img alt="" src={bath7} />
-              <img alt="" src={bath8} />
-              <img alt="" src={bath9} />
-              <img alt="" src={bath10} />
-            </Carousel>
-          </div>
-          <div
-            style={{
-              height: "200px",
-            }}
-            className="flex flex-col justify-center py-16 bg-cover bg-center gap-2"
-          >
-            <span className="text-center z-10 text-white font-medium text-lg">
+          <div className="flex flex-col justify-center py-16 bg-cover bg-center gap-2 h-[200px] lg:h-[400px]">
+            <span className="text-center z-10 text-white font-medium text-lg lg:text-2xl">
               Falta pouco para você realizar seu sonho
             </span>
             <div className="text-center z-10">
@@ -278,7 +263,7 @@ export const Route = createRootRoute({
                 target="_blank"
                 rel="noopener"
               >
-                <button className="btn btn-primary uppercase">
+                <button className="btn btn-primary uppercase lg:btn-lg">
                   solicite um orçamento
                 </button>
               </a>
@@ -286,11 +271,9 @@ export const Route = createRootRoute({
             <img
               src={HappyCouple}
               alt=""
-              className="absolute object-cover w-full z-0"
+              className="absolute object-cover w-full z-0 h-[200px] lg:h-[400px] object-top lg:object-left-top"
               style={{
-                height: "200px",
                 filter: "brightness(0.3)",
-                maxWidth: "500px",
               }}
             />
           </div>
@@ -322,15 +305,17 @@ export const Route = createRootRoute({
               <img alt="" src={ktch16} />
             </Carousel>
           </div>
-          <div className="bg-blue p-4 flex flex-col gap-2">
-            <span className="text-white">Mais inspirações e dicas</span>
+          <div className="bg-blue p-4 flex flex-col gap-2 lg:p-16 lg:items-center">
+            <span className="text-white lg:text-2xl">
+              Mais inspirações e dicas
+            </span>
             <div>
               <a
                 href="https://www.instagram.com/juw_arquitetura/"
                 target="_blank"
                 rel="noopener"
               >
-                <button className="btn btn-primary uppercase">
+                <button className="btn btn-primary uppercase lg:btn-lg">
                   meu insta{" "}
                   <svg
                     width="20"
@@ -395,10 +380,12 @@ export const Route = createRootRoute({
             </Carousel>
           </div>
         </div>
-        <div className="bg-darkBase text-center flex flex-col p-4 gap-4">
+        <div className="bg-darkBase text-center flex flex-col p-4 gap-4 lg:p-16">
           <div className="flex flex-col">
-            <span className="font-medium">Entre em contato</span>
-            <span>Transforme seu espaço dos sonhos em realidade!</span>
+            <span className="font-medium lg:text-2xl">Entre em contato</span>
+            <span className="lg:text-2xl">
+              Transforme seu espaço dos sonhos em realidade!
+            </span>
           </div>
           <div>
             <a
@@ -406,7 +393,7 @@ export const Route = createRootRoute({
               target="_blank"
               rel="noopener"
             >
-              <button className="btn btn-primary uppercase">
+              <button className="btn btn-primary uppercase lg:btn-lg">
                 fale comigo
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -441,8 +428,7 @@ export const Route = createRootRoute({
           <div className="flex justify-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="21"
-              height="20"
+              className={`w-[20px] lg:w-[30px]`}
               viewBox="0 0 21 20"
               fill="none"
             >
@@ -465,8 +451,7 @@ export const Route = createRootRoute({
               </defs>
             </svg>
             <svg
-              width="20"
-              height="20"
+              className={`w-[20px] lg:w-[30px]`}
               viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -485,18 +470,13 @@ export const Route = createRootRoute({
               </defs>
             </svg>
           </div>
-          <div className="text-sm text-white flex flex-col">
+          <div className="text-sm text-white flex flex-col lg:text-lg">
             <span>Rua das Pescadas, 75</span>
             <span>Aquarius, São José dos Campos - SP</span>
           </div>
-          <a
-            className="text-sm underline text-white"
-            href="https://www.gnunezandrade.dev/"
-            target="_blank"
-            rel="noopener"
-          >
+          <span className="text-sm text-white lg:text-lg">
             Albacore Marketing Digital
-          </a>
+          </span>
         </div>
         {(location.hostname === "localhost" ||
           location.hostname === "127.0.0.1") && <TanStackRouterDevtools />}

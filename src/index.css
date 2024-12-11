@@ -12,14 +12,18 @@
   @apply flex justify-center items-center;
 }
 
+.carousel {
+  @apply w-full;
+}
+
 .carousel img {
   @apply object-cover h-[200px] lg:h-[400px];
 }
 
 .carouselContainer {
-  @apply px-4 py-8 flex flex-col items-center gap-2 bg-lightBase;
+  @apply py-8 flex flex-col items-center gap-8 bg-lightBase max-w-[1000px];
 }
 
 .carouselContainer > span {
-  @apply w-full text-left lg:text-3xl lg:ml-32 lg:mb-8;
+  @apply text-left text-2xl lg:text-3xl;
 }
